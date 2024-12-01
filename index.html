@@ -141,20 +141,6 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static/images/fig1_final.jpg" alt="Teaser image" class="teaser-image">
-      <h2 class="content has-text-justified">
-        In contrast to existing methods utilizing (a) pixel-level semantic labels or (b) image-level semantic labels, we leverage unlabeled masks as supervision, which can be freely generated from vision foundation models such as SAM and DINO.
-      </h2>
-    </div>
-  </div>
-</section> -->
-<!-- End teaser video -->
-
 <!-- Teaser video-->
 <section class="section hero teaser-video">
   <div class="columns is-centered has-text-centered">
@@ -167,26 +153,26 @@
       <br>
       <div class="video-grid">
         <div class="video-container">
-          <a href="static/results/test/videos/081cd325b2fa_13.gif">
-            <img src="static/results/test/videos/081cd325b2fa_13.gif">
+          <a href="static/results/videos/main_qual/ours/resized_e610fde8a3b4_4.gif">
+            <img src="static/results/videos/main_qual/ours/resized_e610fde8a3b4_4.gif">
           </a>
           <div class="video-caption">The two vehicles parked on the side of the road</div>
         </div>
         <div class="video-container">
-          <a href="static/results/test/videos/af89047d7a9f_4.gif">
-            <img src="static/results/test/videos/af89047d7a9f_4.gif">
+          <a href="static/results/videos/main_qual/ours/resized_45fef1660d6d_2.gif">
+            <img src="static/results/videos/main_qual/ours/resized_45fef1660d6d_2.gif">
           </a>
           <div class="video-caption">moving from right to left</div>
         </div>
         <div class="video-container">
-          <a href="static/results/test/videos/a53af03a1bdf_9.gif">
-            <img src="static/results/test/videos/a53af03a1bdf_9.gif">
+          <a href="static/results/videos/main_qual/ours/resized_83b4fc545af8_6.gif">
+            <img src="static/results/videos/main_qual/ours/resized_83b4fc545af8_6.gif">
           </a>
           <div class="video-caption">It enthusiastically chases and pounces on the wand</div>
         </div>
         <div class="video-container">
-          <a href="static/results/test/videos/bc15c30bae6f_7.gif">
-            <img src="static/results/test/videos/bc15c30bae6f_7.gif">
+          <a href="static/results/videos/main_qual/ours/resized_ff6a312b4f9c_1.gif">
+            <img src="static/results/videos/main_qual/ours/resized_ff6a312b4f9c_1.gif">
           </a>
           <div class="video-caption">baby tiger without moving position</div>
         </div>
@@ -255,8 +241,8 @@
         <div class="column is-full-width">
           <h2 class="title is-3 has-text-centered">Motivation</h2>
           <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <img src="static/results/images/motivation_1.jpg" alt="Motivation image 1" class="method" style="max-width: 48%; height: auto; display: block;">
-            <img src="static/results/images/motivation_2.jpg" alt="Motivation image 2" class="method" style="max-width: 48%; height: auto; display: block;">
+            <img src="static/results/images/motivation/motivation_1.jpg" alt="Motivation image 1" class="method" style="max-width: 48%; height: auto; display: block;">
+            <img src="static/results/images/motivation/motivation_2.jpg" alt="Motivation image 2" class="method" style="max-width: 48%; height: auto; display: block;">
           </div>
           <h2 class="content has-text-justified" style="margin-top: 20px;">
             Previous methods simultaneously train track generation and vision-language alignment, whereas our approach focuses solely on training the latter.
@@ -291,20 +277,20 @@
           <h2 class="title is-3 has-text-centered">Architecture</h2>
           <div class="hero-body" style="position: relative; text-align: center;">
             <!-- 화살표 버튼 (왼쪽) -->
-            <button id="arrow-left" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: none; border: none; cursor: pointer; z-index: 10;">
+            <button id="arrow-left" style="position: absolute; top: 50%; left: -30px; transform: translateY(-50%); background: none; border: none; cursor: pointer; z-index: 10;">
               <i class="fas fa-arrow-left" style="font-size: 24px; color: #333;"></i>
             </button>
             
             <!-- 이미지 컨테이너 -->
             <div style="position: relative;">
-              <img src="static/results/images/main_figure.jpg" alt="Method image" class="method" id="architecture-main-image" style="transition: opacity 0.5s ease-in-out; max-width: 100%;">
+              <img src="static/results/images/architecture/main_figure.jpg" alt="Method image" class="method" id="architecture-main-image" style="transition: opacity 0.5s ease-in-out; max-width: 100%;">
   
               <!-- 캡션 -->
               <p id="image-caption" style="margin-top: 10px; font-size: 16px; font-style: italic; color: #555;">Overall pipeline of the proposed SOLA framework</p>
             </div>
   
             <!-- 화살표 버튼 (오른쪽) -->
-            <button id="arrow-right" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: none; border: none; cursor: pointer; z-index: 10;">
+            <button id="arrow-right" style="position: absolute; top: 50%; right: -30px; transform: translateY(-50%); background: none; border: none; cursor: pointer; z-index: 10;">
               <i class="fas fa-arrow-right" style="font-size: 24px; color: #333;"></i>
             </button>
           </div>
@@ -324,11 +310,11 @@
     // 이미지와 캡션 리스트
     const images = [
       {
-        src: 'static/results/images/main_figure.jpg',
+        src: 'static/results/images/architecture/main_figure.jpg',
         caption: 'Overall pipeline of the proposed SOLA framework'
       },
       {
-        src: 'static/results/images/module.jpg',
+        src: 'static/results/images/architecture/module.jpg',
         caption: 'Architecture of the language-aligned track selection module'
       }
     ];
@@ -376,75 +362,164 @@
 <!-- Qualitative Results Section with Slider Functionality -->
 <section class="section hero qualitative-results">
   <div class="columns is-centered has-text-centered">
-    <div class="column" style="width: 100%; max-width: 1200px;">
+    <div class="column" style="width: 100%; max-width: 800px;">
       <h2 class="title is-3">Qualitative Results</h2>
       <br>
       <div style="position: relative; left: 0px;">
         <!-- 화살표 버튼 -->
-        <button id="arrow-left-qual" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: none; border: none; cursor: pointer; z-index: 10;">
+        <button id="arrow-left-qual" style="position: absolute; top: 50%; left: -30px; transform: translateY(-50%); background: none; border: none; cursor: pointer; z-index: 10;">
           <i class="fas fa-arrow-left" style="font-size: 24px; color: #333;"></i>
         </button>
+
         <div id="video-groups-container" style="overflow: hidden; position: relative;">
+
           <!-- Video Group 1 -->
-          <div class="video-group" style="display: block; opacity: 1; transition: opacity 0.5s ease-in-out;">
-            <table align="center" style="width: 100%; border-spacing: 10px;">
+          <div class="video-group group-1" style="display: block; opacity: 1; transition: opacity 0.5s ease-in-out;">
+            <table align="center" style="width: 70%;">
               <tbody>
-                <tr style="padding-bottom: 10px;">
-                  <th class="rotated-text">DsHmp</th>
+                <tr>
+                  <th class="rotated-text dshmp-label">DsHmp</th>
                   <td>
                     <div class="video-container">
-                      <img src="static/results/test/videos/081cd325b2fa_13.gif" alt="Video 1">
+                      <img src="static/results/videos/main_qual/dshmp/resized_0fea0cb75a25_2.gif" alt="Video 1">
                     </div>
                   </td>
                   <td>
                     <div class="video-container">
-                      <img src="static/results/test/videos/a53af03a1bdf_28.gif" alt="Video 2">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="video-container">
-                      <img src="static/results/test/videos/af89047d7a9f_4.gif" alt="Video 3">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="video-container">
-                      <img src="static/results/test/videos/bc15c30bae6f_0.gif" alt="Video 4">
+                      <img src="static/results/videos/main_qual/dshmp/resized_0fea0cb75a25_7.gif" alt="Video 2">
                     </div>
                   </td>
                 </tr>
-                <tr style="margin-top: 10px;">
-                  <th class="rotated-text">Ours</th>
+                <tr>
+                  <th class="rotated-text ours-label">Ours</th>
                   <td>
                     <div class="video-container">
-                      <img src="static/results/test/videos/081cd325b2fa_23.gif" alt="Video 5">
-                      <div class="video-caption">The two vehicles parked on the side of the road</div>
+                      <img src="static/results/videos/main_qual/ours/resized_0fea0cb75a25_2.gif" alt="Video 3">
+                      <div class="video-caption">Giraffe standing in place and grazing</div>
                     </div>
                   </td>
                   <td>
                     <div class="video-container">
-                      <img src="static/results/test/videos/a53af03a1bdf_9.gif" alt="Video 6">
-                      <div class="video-caption">moving from right to left</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="video-container">
-                      <img src="static/results/test/videos/af89047d7a9f_7.gif" alt="Video 7">
-                      <div class="video-caption">It enthusiastically chases and pounces on the wand</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="video-container">
-                      <img src="static/results/test/videos/bc15c30bae6f_7.gif" alt="Video 8">
-                      <div class="video-caption">baby tiger without moving position</div>
+                      <img src="static/results/videos/main_qual/ours/resized_0fea0cb75a25_7.gif" alt="Video 4">
+                      <div class="video-caption">The two giraffes turning around and leaving</div>
                     </div>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+        
+          <!-- Video Group 2 -->
+          <div class="video-group group-2" style="display: none; opacity: 0; transition: opacity 0.5s ease-in-out;">
+            <table align="center" style="width: 70%">
+              <tbody>
+                <tr>
+                  <th class="rotated-text dshmp-label">DsHmp</th>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/dshmp/resized_73111873f72a_0.gif" alt="Video 5">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/dshmp/resized_73111873f72a_3.gif" alt="Video 6">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="rotated-text ours-label">Ours</th>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/ours/resized_73111873f72a_0.gif" alt="Video 7">
+                      <div class="video-caption">The first car turning</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/ours/resized_73111873f72a_3.gif" alt="Video 8">
+                      <div class="video-caption">The second car turning</div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Video Group 3 -->
+          <div class="video-group group-3" style="display: none; opacity: 0; transition: opacity 0.5s ease-in-out;">
+            <table align="center" style="width: 70%">
+              <tbody>
+                <tr>
+                  <th class="rotated-text dshmp-label">DsHmp</th>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/dshmp/resized_db345176c4e5_0.gif" alt="Video 5">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/dshmp/resized_db345176c4e5_6.gif" alt="Video 6">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="rotated-text ours-label">Ours</th>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/ours/resized_db345176c4e5_0.gif" alt="Video 7">
+                      <div class="video-caption">cow in the front first then moving to right</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/ours/resized_db345176c4e5_6.gif" alt="Video 8">
+                      <div class="video-caption">The cow positioned at the far end</div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Video Group 4 -->
+          <div class="video-group group-4" style="display: none; opacity: 0; transition: opacity 0.5s ease-in-out;">
+            <table align="center" style="width: 75%">
+              <tbody>
+                <tr>
+                  <th class="rotated-text dshmp-label">DsHmp</th>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/dshmp/resized_f97e8c417f45_10.gif" alt="Video 5">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/dshmp/resized_f97e8c417f45_4.gif" alt="Video 6">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="rotated-text ours-label">Ours</th>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/ours/resized_f97e8c417f45_10.gif" alt="Video 7">
+                      <div class="video-caption">The distant sheep, grazing at the corner of the wall</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="video-container">
+                      <img src="static/results/videos/main_qual/ours/resized_f97e8c417f45_4.gif" alt="Video 8">
+                      <div class="video-caption">goat moving from rightmost to the middle</div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
         </div>
         <!-- 화살표 버튼 -->
-        <button id="arrow-right-qual" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: none; border: none; cursor: pointer; z-index: 10;">
+        <button id="arrow-right-qual" style="position: absolute; top: 50%; right: -30px; transform: translateY(-50%); background: none; border: none; cursor: pointer; z-index: 10;">
           <i class="fas fa-arrow-right" style="font-size: 24px; color: #333;"></i>
         </button>
       </div>
@@ -453,35 +528,121 @@
 </section>
 
 <style>
-.qualitative-results .rotated-text {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  text-align: center;
-  padding-right: 0;
-  vertical-align: middle;
+/* Video Group 1 Styles */
+.video-group.group-1 {
+  margin-left: -70px;
 }
-.qualitative-results .video-caption {
-  font-style: italic;
-  font-size: 14px;
-  margin-top: 5px;
+.video-group.group-1 .dshmp-label {
+  writing-mode: vertical;
+    transform: rotate(270deg);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 30px;
 }
-.qualitative-results .video-container {
-  text-align: center;
-  /* max-width: 200px; */
-  margin: auto;
+.video-group.group-1 .ours-label {
+  writing-mode: vertical;
+    transform: rotate(270deg);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 30px;
+    padding-left: 35px;
 }
-.qualitative-results .video-container img {
-  width: 100%;
-  /* max-width: 200px; */
-  max-height: 130px;
+.video-group.group-1 .video-container{
+  margin: 0 auto; /* 가로 중앙 정렬 */
+}
+.video-group.group-1 .video-container img {
+  max-height: 140px; /* GIF 최대 높이 */
   object-fit: contain;
   display: block;
   margin: auto;
 }
-.qualitative-results table {
-  border-spacing: 10px;
+/* Video Group 2 Styles */
+.video-group.group-2 {
+  margin-left: -60px;
 }
-</style>
+.video-group.group-2 .dshmp-label {
+  writing-mode: vertical;
+    transform: rotate(270deg);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20px;
+}
+.video-group.group-2 .ours-label {
+  writing-mode: vertical;
+    transform: rotate(270deg);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+/* Video Group 3 Styles */
+.video-group.group-3 {
+  margin-left: -80px;
+}
+.video-group.group-3 .dshmp-label {
+  writing-mode: vertical;
+    transform: rotate(270deg);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 50px;
+}
+.video-group.group-3 .ours-label {
+  writing-mode: vertical;
+    transform: rotate(270deg);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 50px;
+    padding-left: 35px;
+}
+/* Video Group 4 Styles */
+.video-group.group-4 {
+  margin-left: -80px;
+}
+.video-group.group-4 .dshmp-label {
+  writing-mode: vertical;
+    transform: rotate(270deg);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 50px;
+}
+.video-group.group-4 .ours-label {
+  writing-mode: vertical;
+    transform: rotate(270deg);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 50px;
+    padding-left: 35px;
+}
+
+
+  .qualitative-results .rotated-text {
+    writing-mode: vertical;
+    transform: rotate(270deg);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 80px;
+  }
+  .qualitative-results .video-caption {
+    font-style: italic;
+    font-size: 14px;
+    max-width: 220px; /* 캡션 최대 너비 설정 */
+    word-wrap: break-word; /* 너비 초과 시 줄바꿈 */
+    text-align: center;
+    margin: auto;
+  }
+  .qualitative-results .video-container {
+    margin: 0 auto; /* 가로 중앙 정렬 */
+  }
+  .qualitative-results .video-container img {
+    max-height: 150px; /* GIF 최대 높이 */
+    object-fit: contain;
+    display: block;
+    margin: auto;
+  }
+  .qualitative-results table {
+    border-spacing: -10px;
+  }
+  </style>
 
 <script>
 const videoGroups = document.querySelectorAll(".video-group");
@@ -509,7 +670,6 @@ document.getElementById("arrow-right-qual").addEventListener("click", () => {
   updateGroup(newIndex);
 });
 </script>
-
 <!-- End of Qualitative Results -->
 
 
@@ -522,11 +682,11 @@ document.getElementById("arrow-right-qual").addEventListener("click", () => {
           The best-performing results are presented in <strong>bold</strong>, while the second-best results are <u>underlined</u>. <br>
         </span>
         <figure class="image is-centered">
-          <img src="static/results/images/main_quan.png" alt="Main Quantitative Results" class="method main-quan">
+          <img src="static/results/images/quan/main_quan.png" alt="Main Quantitative Results" class="method main-quan">
           <figcaption class="has-text-centered caption">Quantitative comparison on <strong>MeViS</strong>.</figcaption>
         </figure>
         <figure class="image is-centered">
-          <img src="static/results/images/zeroshot_quan.png" alt="Zero-shot Quantitative Results" class="method module">
+          <img src="static/results/images/quan/zeroshot_quan.png" alt="Zero-shot Quantitative Results" class="method module">
           <figcaption class="has-text-centered caption"><strong>Zero-shot</strong> quantitative comparison on <strong>Ref-Youtube-VOS</strong> and <strong>Ref-DAVIS</strong>.</figcaption>
         </figure>
       </div>
@@ -536,14 +696,14 @@ document.getElementById("arrow-right-qual").addEventListener("click", () => {
 
 <style>
   .quantitative-results .main-quan {
-    max-width: 40%; /* 원하는 크기로 조정 */
+    max-width: 45%; /* 원하는 크기로 조정 */
     height: auto;   /* 비율 유지 */
     margin: 0 auto; /* 가로 중앙 정렬 */
     display: block; /* 중앙 정렬 보장 */
   }
 
   .quantitative-results .module {
-    max-width: 70%; /* 원하는 크기로 조정 */
+    max-width: 75%; /* 원하는 크기로 조정 */
     height: auto;   /* 비율 유지 */
     margin: 0 auto; /* 가로 중앙 정렬 */
     display: block; /* 중앙 정렬 보장 */
@@ -568,7 +728,7 @@ document.getElementById("arrow-right-qual").addEventListener("click", () => {
 
 
 
-<!--BibTex citation -->
+<!-- BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
