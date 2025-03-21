@@ -1,0 +1,55 @@
+exp_name: zeroshot
+
+model:
+  object_token_dim: 256 # dimension of object tokens
+  lang_token_dim: 1024 # dimension of language tokens
+  n_layers: 2 # number of attention layers
+  max_temporal_length: 100 # maximum number of frames
+  n_negative: 32 # number of negative object tokens
+  dropout_p: 0.2
+  norm_type: group
+  n_groups: 8
+  n_groups_module: 8
+  roberta_version: sentence-transformers/all-roberta-large-v1
+
+train:
+  n_epochs: 15
+  pred_threshold: 0.5
+  temperature: 0.07
+  alpha: 0.5
+  alignment_weight: 0.3
+  lr: 0.000005
+  lr_factor: 0.5
+  lr_patience: 5
+  grad_clip_norm: 1.0
+  positive_metric: iou
+  positive_threshold: 0.7
+  positive_weight: 1.5
+
+dataset:
+  data_root: /root/of/datasets
+  track_root: /root/of/sam2_tracks
+  num_workers: 4
+  train:
+    data_name: mevis
+    data_type: train
+    sam2_output_dirs: "gt_tracks,grid_tracks"
+    batch_size: 1
+  valid:
+    data_name: mevis
+    data_type: valid_u
+    sam2_output_dirs: "grid_tracks,gdino_tracks"
+    batch_size: 1
+  test:
+    data_name: ref-ytbvos
+    data_type: valid
+    sam2_output_dirs: "grid_tracks,gdino_tracks"
+    batch_size: 1
+
+eval:
+  pred_threshold: 0.5
+
+results:
+  output_dir: SOLA/TRAIN
+  eval_output_dir: SOLA/EVAL
+  test_output_dir: SOLA/INFERENCE
