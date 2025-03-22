@@ -16,10 +16,15 @@
   </p>
   <h3 align="center"><a href="https://arxiv.org/abs/2412.01136">Paper </a> | <a href="https://cvlab-kaist.github.io/SOLA/">Project Page </a> | <a href=#BibTeX>BibTeX </a> </h3>
   <div align="center"></div>
+
+  <p align="center">
+    <span style="font-size:18px; color:#d6336c;"><strong>⬇️ Click to watch!</strong></span><br>
+    <a href="https://youtu.be/RP_va3dFKFU">
+      <img src="https://img.youtube.com/vi/RP_va3dFKFU/0.jpg" alt="Watch the video", width="600px">
+    </a>
+  </p>
+
 </p>
-
-
-![Results](SOLA.gif)
 
 ## Environment Settings
 
@@ -89,17 +94,14 @@ CUDA_VISIBLE_DEVICES=0 python generate_tokens_GT_mevis.py --dataset mevis --data
 
 # MeViS (train) - GRID
 CUDA_VISIBLE_DEVICES=0 python generate_prompts_grid.py --dataset mevis --data_type train --bin_size 4 --pid 0 --n_pid 1
-
 CUDA_VISIBLE_DEVICES=0 python generate_tokens_grid.py --dataset mevis --data_type train --bin_size 4 --batch_size 4 --miou_thresh 0.7 --n_max_tracks 64 --pid 0 --n_pids 1
 
 # MeViS (valid_u / valid) - GroundingDINO
 CUDA_VISIBLE_DEVICES=0 python generate_prompts_gdino.py --dataset mevis --data_type valid_u --bin_size 4 --box_threshold 0.2 --text_threshold 0.25 --pid 0 --n_pid 1
-
 CUDA_VISIBLE_DEVICES=0 python generate_tokens_gdino.py --dataset mevis --data_type valid_u --bin_size 4 --batch_size 4 --miou_thresh 0.7 --stability_score_thresh 0.85 --n_max_tracks 16 --pid 0 --n_pids 1
 
 # MeViS (valid_u / valid) - GRID
 CUDA_VISIBLE_DEVICES=0 python generate_prompts_grid.py --dataset mevis --data_type valid_u --bin_size 0 --pid 0 --n_pid 1
-
 CUDA_VISIBLE_DEVICES=0 python generate_tokens_grid.py --dataset mevis --data_type valid_u --bin_size 4 --batch_size 4 --miou_thresh 0.7 --n_max_tracks 64 --pid 0 --n_pids 1
 ```
 
@@ -110,16 +112,15 @@ CUDA_VISIBLE_DEVICES=0 python generate_tokens_GT_ytbvos.py --dataset ref-ytbvos 
 
 # Ref-Youtube-VOS (train) - GRID
 CUDA_VISIBLE_DEVICES=0 python generate_prompts_grid.py --dataset ref-ytbvos --data_type train --bin_size 4 --pid 0 --n_pid 1
+CUDA_VISIBLE_DEVICES=0 python generate_tokens_grid.py --dataset ref-ytbvos --data_type train --bin_size 4 --batch_size 4 --miou_thresh 0.7 --n_max_tracks 64 --pid 0 --n_pids 1
 
 # Ref-Youtube-VOS (valid) - GroundingDINO
-CUDA_VISIBLE_DEVICES=0 python generate_prompts_gdino.py --dataset ref-ytbvos --data_type valid_u --bin_size 4 --box_threshold 0.2 --text_threshold 0.25 --pid 0 --n_pid 1
-
-CUDA_VISIBLE_DEVICES=0 python generate_tokens_gdino.py --dataset ref-ytbvos --data_type valid_u --bin_size 4 --batch_size 4 --miou_thresh 0.7 --stability_score_thresh 0.85 --n_max_tracks 16 --pid 0 --n_pids 1
+CUDA_VISIBLE_DEVICES=0 python generate_prompts_gdino.py --dataset ref-ytbvos --data_type valid --bin_size 4 --box_threshold 0.2 --text_threshold 0.25 --pid 0 --n_pid 1
+CUDA_VISIBLE_DEVICES=0 python generate_tokens_gdino.py --dataset ref-ytbvos --data_type valid --bin_size 4 --batch_size 4 --miou_thresh 0.7 --stability_score_thresh 0.85 --n_max_tracks 16 --pid 0 --n_pids 1
 
 # Ref-Youtube-VOS (valid) - GRID
-CUDA_VISIBLE_DEVICES=0 python generate_prompts_grid.py --dataset ref-ytbvos --data_type valid_u --bin_size 0 --pid 0 --n_pid 1
-
-CUDA_VISIBLE_DEVICES=0 python generate_tokens_grid.py --dataset ref-ytbvos --data_type valid_u --bin_size 4 --batch_size 4 --miou_thresh 0.7 --n_max_tracks 64 --pid 0 --n_pids 1
+CUDA_VISIBLE_DEVICES=0 python generate_prompts_grid.py --dataset ref-ytbvos --data_type valid --bin_size 0 --pid 0 --n_pid 1
+CUDA_VISIBLE_DEVICES=0 python generate_tokens_grid.py --dataset ref-ytbvos --data_type valid --bin_size 4 --batch_size 4 --miou_thresh 0.7 --n_max_tracks 64 --pid 0 --n_pids 1
 ```
 
 These will generate SAM2 object tokens and corresponding masklets in `sam2_tracks` directory.
