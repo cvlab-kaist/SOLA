@@ -47,7 +47,7 @@ cd sam2
 (continue with instructions in SAM2 repository)
 
 git clone https://github.com/IDEA-Research/GroundingDINO.git
-cd GrondingDINO
+cd GroundingDINO
 (continue with instructions in GroundingDINO repository)
 
 cd ../..
